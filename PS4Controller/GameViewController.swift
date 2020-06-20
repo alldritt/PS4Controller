@@ -46,7 +46,7 @@ class GameViewController: UIViewController {
                                                     guard let controller = notification.object as? GCController else { return }
                                                     
                                                     if self.controller == controller {
-                                                        self.disconnectController()
+                                                        self.disconnectFromController()
                                                     }
             }
         }
@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
     
     private func connectToController(_ controller: GCController) {
         if self.controller != nil {
-            disconnectController()
+            disconnectFromController()
         }
         
         self.controller = controller
@@ -154,15 +154,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    private func disconnectController() {
-        guard let controller = self.controller else { return }
-        
-        controller.extendedGamepad?.leftThumbstick.valueChangedHandler = nil;
-        controller.extendedGamepad?.rightThumbstick.valueChangedHandler = nil;
-        controller.extendedGamepad?.buttonX.pressedChangedHandler = nil;
-        controller.extendedGamepad?.buttonY.pressedChangedHandler = nil;
-        controller.extendedGamepad?.buttonA.pressedChangedHandler = nil;
-        controller.extendedGamepad?.buttonB.pressedChangedHandler = nil;
+    private func disconnectFromController() {
         self.controller = nil;
         gameScene.controllerIsActive = false
     }
