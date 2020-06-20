@@ -97,45 +97,59 @@ class GameViewController: UIViewController {
             self.gameScene.rightThumbY = yValue
         }
         controller.extendedGamepad?.leftThumbstickButton?.valueChangedHandler = { (dpad, value, pressed) in
+            print("leftThumbstickButton - value: \(value), pressed: \(pressed)")
             self.gameScene.leftThumbPressed = pressed
         }
         controller.extendedGamepad?.rightThumbstickButton?.valueChangedHandler = { (dpad, value, pressed) in
+            print("rightThumbstickButton - value: \(value), pressed: \(pressed)")
             self.gameScene.rightThumbPressed = pressed
         }
         controller.extendedGamepad?.leftShoulder.pressedChangedHandler = { (dpad, value, pressed) in
+            print("leftShoulder - value: \(value), pressed: \(pressed)")
             self.gameScene.leftSholderPressed = pressed
         }
         controller.extendedGamepad?.rightShoulder.pressedChangedHandler = { (dpad, value, pressed) in
+            print("rightShoulder - value: \(value), pressed: \(pressed)")
             self.gameScene.rightSholderPressed = pressed
         }
         controller.extendedGamepad?.buttonOptions?.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonOptions - value: \(value), pressed: \(pressed)")
             self.gameScene.optionsPressed = pressed
         }
         controller.extendedGamepad?.buttonMenu.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonMenu - value: \(value), pressed: \(pressed)")
             self.gameScene.menuPressed = pressed
         }
         controller.extendedGamepad?.dpad.up.valueChangedHandler = { (dpad, value, pressed) in
+            print("dpad.up - value: \(value), pressed: \(pressed)")
             self.gameScene.dpadUpPressed = pressed
         }
         controller.extendedGamepad?.dpad.down.valueChangedHandler = { (dpad, value, pressed) in
+            print("dpad.down - value: \(value), pressed: \(pressed)")
             self.gameScene.dpadDownPressed = pressed
         }
         controller.extendedGamepad?.dpad.left.valueChangedHandler = { (dpad, value, pressed) in
+            print("dpad.left - value: \(value), pressed: \(pressed)")
             self.gameScene.dpadLeftPressed = pressed
         }
         controller.extendedGamepad?.dpad.right.valueChangedHandler = { (dpad, value, pressed) in
+            print("dpad.right - value: \(value), pressed: \(pressed)")
             self.gameScene.dpadRightPressed = pressed
         }
         controller.extendedGamepad?.buttonX.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonX - value: \(value), pressed: \(pressed)")
             self.gameScene.xPressed = pressed
         }
         controller.extendedGamepad?.buttonY.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonY - value: \(value), pressed: \(pressed)")
             self.gameScene.yPressed = pressed
         }
         controller.extendedGamepad?.buttonA.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonA - value: \(value), pressed: \(pressed)")
             self.gameScene.aPressed = pressed
         }
         controller.extendedGamepad?.buttonB.valueChangedHandler = { (dpad, value, pressed) in
+            print("buttonB - value: \(value), pressed: \(pressed)")
             self.gameScene.bPressed = pressed
         }
     }
